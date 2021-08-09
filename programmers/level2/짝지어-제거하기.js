@@ -1,13 +1,12 @@
 function solution(s) {
-     const arr = [];
+    const stack = [];
     for (let i = 0; i < s.length; i++) {
-        if (arr[arr.length - 1] !== s[i]) {
-            arr.push(s[i]);
+        if (stack[stack.length - 1] !== s[i]) {
+            stack.push(s[i]);
         }
-        else arr.pop();
+        else stack.pop();
     }
-    if (!arr.length) return 1;
-    else return 0;
-    
+    if (!stack.length) return 1;
+    return 0;
 }
 
