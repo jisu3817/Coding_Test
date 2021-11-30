@@ -17,9 +17,8 @@ function solution(record) {
         }
     })
     
-    result = result.map((msg) => {
+    return (result.map((msg) => {
         return userIdsNickNames[Object.keys(msg)] + msg[Object.keys(msg)];
-    })
+    }));
  
-   return result;
 }
