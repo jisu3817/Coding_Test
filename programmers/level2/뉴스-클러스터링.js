@@ -1,6 +1,5 @@
 function solution(str1, str2) {
-    const answer = '';
-    const regeEx =  /^[a-z]*$/;
+    const regexp =  /^[a-z]*$/;
     
     let multipleSet1 = str1.toLowerCase().split('').map((str, i, str1) => str + str1[i + 1]);
     let multipleSet2 = str2.toLowerCase().split('').map((str, i, str2) => str + str2[i + 1]);
