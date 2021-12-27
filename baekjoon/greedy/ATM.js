@@ -4,7 +4,6 @@ const input = require('fs')
   .split('\n');
 const timeTaken = input[1].split(' ').map(Number);
 
-timeTaken.pop();
 const arr = [];
 
 timeTaken.sort((a, b) => a - b).map((time, idx) => {
