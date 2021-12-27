@@ -10,5 +10,6 @@ for (let money of iterable) {
 	cnt += parseInt(pay / money);
 	pay %= money;
 }
+
 console.log(cnt);
 
