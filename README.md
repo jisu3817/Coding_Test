@@ -5,7 +5,7 @@
 <br>
 <br>
 
-❗️백준 Node.js 입력 받기(fs 모듈)
+❗️백준 - Node.js 입력 받기(fs 모듈)
 
 <br>
 
