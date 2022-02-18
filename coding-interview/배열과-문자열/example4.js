@@ -7,10 +7,35 @@
 회문이 꼭 사전에 등장하는 단어로 제한될 필요는 없다. 
  */
 
-const input = 'Tact Coa';
+const input = 'ttae';
 
 const inputArr = input.replace(/(\s*)/g, '').toLowerCase().split('');
 
-const result = inputArr.filter((value, idx) => {
-  return idx !== inputArr.indexOf(value);
-})
+let cnt = 0;
+let result = true;
+const hash = {};
+
+inputArr.forEach(value => {
+  if (value in hash) hash[value] += 1;
+  else hash[value] = 1;
+});
+
+// 짝수
+if (!(inputArr.length % 2)) {
+  const oddLen = Object.values(hash).filter((value) => {
+    if (value % 2) return value;
+  }).length;
+
+  if (oddLen) result = false;
+} 
+// 홀수
+else {
+  const oneStr = Object.values(hash).filter((value) => value === 1).length;
+  const oddLen = Object.values(hash).filter((value) => {
+    if ((value % 2) && value !== 1) return value;
+  }).length;
+
+  if ((oneStr > 1) || oddLen) result = false;
+}
+
+console.log(result);
