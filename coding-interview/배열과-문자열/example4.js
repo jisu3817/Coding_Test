@@ -7,7 +7,7 @@
 회문이 꼭 사전에 등장하는 단어로 제한될 필요는 없다. 
  */
 
-const input = 'ttae';
+const input = 'ttaa';
 
 const inputArr = input.replace(/(\s*)/g, '').toLowerCase().split('');
 
@@ -20,22 +20,21 @@ inputArr.forEach(value => {
   else hash[value] = 1;
 });
 
-// 짝수
-if (!(inputArr.length % 2)) {
-  const oddLen = Object.values(hash).filter((value) => {
-    if (value % 2) return value;
-  }).length;
+// if (!(inputArr.length % 2)) {
+//   const oddLen = Object.values(hash).filter((value) => {
+//     if (value % 2) return value;
+//   }).length;
 
-  if (oddLen) result = false;
-} 
-// 홀수
-else {
+//   if (oddLen) result = false;
+// } 
+
+// else {
   const oneStr = Object.values(hash).filter((value) => value === 1).length;
-  const oddLen = Object.values(hash).filter((value) => {
-    if ((value % 2) && value !== 1) return value;
-  }).length;
+  const oddLen = Object.values(hash).filter((value) => (value % 2 && value !== 1)).length;
 
   if ((oneStr > 1) || oddLen) result = false;
-}
+  else result = true;
+// }
 
+// 굳이 짝수와 홀수를 구분해서 구할 필요가 없다. 길이가 짝수인데 홀수 개수의 문자가 존재한다면 위 조건에서 걸릴 것!
 console.log(result);
