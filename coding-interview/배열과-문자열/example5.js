@@ -26,7 +26,7 @@ function sameLenCheck(input) {
   for (let i = 0; i < input[0].length; i += 1) {
     if (!input[0].includes(input[1][i])) cnt += 1;
   }
-
+ 
   if (cnt > 1) return false;
   else return true;
 };
