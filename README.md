@@ -1,11 +1,11 @@
 ### 🔎 문제 소스
-	- 백준: https://www.acmicpc.net/
-	- 프로그래머스: https://programmers.co.kr/learn/challenges
+	- 백준:https://www.acmicpc.net/
+	- 프로그래머스:https://programmers.co.kr/learn/challenges
 
 <br>
 <br>
 
-❗️백준 - Node.js 입력 받기 (fs 모듈)
+❗️ 백준 - Node.js 입력 받기 (fs 모듈)
 
 <br>
 
