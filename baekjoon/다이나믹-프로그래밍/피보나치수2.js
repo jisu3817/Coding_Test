@@ -5,4 +5,4 @@ for (let i = 1; i < N; i += 1) {
   DP[i + 1] = BigInt(DP[i]) + BigInt(DP[i - 1]);
 }
 
-console.log(typeof DP[N].toString());
+console.log(DP[N].toString());
