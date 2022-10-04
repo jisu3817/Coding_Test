@@ -1,0 +1,19 @@
+{
+  "name": "coding_test",
+  "version": "1.0.0",
+  "description": "- 백준:https://www.acmicpc.net/ \t- 프로그래머스: https://programmers.co.kr/learn/challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jisu3817/Coding_Test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jisu3817/Coding_Test/issues"
+  },
+  "homepage": "https://github.com/jisu3817/Coding_Test#readme"
+}
