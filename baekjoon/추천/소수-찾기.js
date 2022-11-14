@@ -3,24 +3,15 @@ const input = fs.readFileSync("/dev/stdin").toString().split("\n");
 
 const inputArr = input[1].split(" ").map(Number);
 
-let cnt = 0;
-for (const item of inputArr) {
-  let num = 2;
-  let isDiv = true;
-  while (num < item) {
-    if (num % item === 0) {
-      isDiv = false;
-      break;
-    }
+function div(item) {
+  for (let i = 2; i < item; i += 1) {
+    if (item % i === 0) return false;
   }
-
-  if (isDiv) {
-    cnt += 1;
-  }
+  return true;
 }
 
-if (inputArr.includes(1)) {
-  console.log(cnt - 1);
-} else {
-  console.log(cnt);
-}
+const result = inputArr.filter((item) => {
+  return item !== 1 && div(item);
+}).length;
+
+console.log(result);
