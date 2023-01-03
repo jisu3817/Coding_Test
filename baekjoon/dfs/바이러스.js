@@ -3,7 +3,7 @@ const node = Number(input[0]); // 총 노드 개수
 const edge_num = Number(input[1]); // 총 배열 길이
 
 // 노드 개수 + 1에 해당하는 만큼의 graph 생성
-let graph = [...new Array(node + 1)].map(() => []);
+let graph = [...new Array(node + 1).fill([])];
 // 이미 방문한 노드인지 확인하기 위함.
 let visited = [...new Array(node + 1)].fill(0);
 // 결과
