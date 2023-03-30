@@ -5,8 +5,10 @@ const boxSize = input.shift().split(" ");
 const SIZE_X = Number(boxSize[0]);
 const SIZE_Y = Number(boxSize[1]);
 
-const box = [];
-const queue = [];
+input.pop();
+
+let box = [];
+let queue = [];
 
 for (let i = 0; i < SIZE_Y; i += 1) {
   const arr = input[i].split(" ").map(Number);
@@ -23,8 +25,9 @@ for (let i = 0; i < SIZE_Y; i += 1) {
   }
 }
 
-let idx = 0;
+const visited = box;
 
+let idx = 0;
 function bfs() {
   while (queue.length !== idx) {
     const y = queue[idx][0];
@@ -39,12 +42,12 @@ function bfs() {
 
       if (nextX < 0 || nextY < 0 || nextX >= SIZE_X || nextY >= SIZE_Y)
         continue;
-      if (box[nextY][nextX] === 0) {
+      if (visited[nextY][nextX] === 0) {
         queue.push([nextY, nextX]);
-        box[nextY][nextX] = box[y][x] + 1;
-      } else if (box[nextY][nextX] === "") {
+        visited[nextY][nextX] = visited[y][x] + 1;
+      } else if (visited[nextY][nextX] === "") {
         queue.push([nextY, nextX]);
-        box[nextY][nextX] = box[y][x];
+        visited[nextY][nextX] = visited[y][x];
       }
     }
     idx += 1;
